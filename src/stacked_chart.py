@@ -73,11 +73,11 @@ if __name__ == '__main__':
 
     # Plotting stacked chart for degree level
     # only looking at the main degrees (Bachelors, Masters, Associates, Certificate)
-    df3 = df.filter(['year', 'degreeLevel'], axis=1).dropna()
-    df3 = df3[df3['degreeLevel'] != 'OtherGraduate']
-    df3 = df3[df3['degreeLevel'] != 'Specialist']
-    df3 = df3[df3['degreeLevel'] != 'Professional']
-    df3 = df3[df3['degreeLevel'] != 'Doctoral']
+    # df3 = df.filter(['year', 'degreeLevel'], axis=1).dropna()
+    # df3 = df3[df3['degreeLevel'] != 'OtherGraduate']
+    # df3 = df3[df3['degreeLevel'] != 'Specialist']
+    # df3 = df3[df3['degreeLevel'] != 'Professional']
+    # df3 = df3[df3['degreeLevel'] != 'Doctoral']
 
     # yr_2001 = df3[df3['year'] == 2001]
     # counts_2001 = yr_2001['degreeLevel'].value_counts(dropna=True, sort=True)
@@ -106,24 +106,34 @@ if __name__ == '__main__':
     # yr_2017 = df3[df3['year'] == 2017]
     # counts_2017 = yr_2017['degreeLevel'].value_counts(dropna=True, sort=True)
 
-    data = pd.DataFrame({
-                'Bachelor':[4087, 4220, 4587, 4636, 4830, 5459, 5901, 6403, 6698],
-                'Associate':[1886, 1983, 2112, 1853, 2176, 2899, 3092, 3339, 3426],
-                'Master':[1573, 1687, 1802, 1752, 1879, 2286, 2442, 2639, 2807],
-                'Certificate': [1320, 1654, 1936, 1842, 2314, 3012, 3467, 4597, 5177] },
-                index=range(1, 10))
-
-    data_perc = data.divide(data.sum(axis=1), axis=0)
-
-    plt.stackplot(range(2001,2018, 2),  data_perc["Bachelor"],  data_perc["Associate"],
-                data_perc["Master"], data_perc["Certificate"], labels=['Bachelor',
-                'Associate','Master', 'Certificate'])
-
-    plt.legend(loc='lower left')
-    plt.margins(0,0)
-    plt.xlabel('Year')
-    plt.ylabel('Percentage')
-    plt.tick_params(axis='y', which='both', labelleft='on', labelright='on')
-    plt.title('Awardees by Institution Degree Type')
-    plt.savefig('../images/stacked_perc_charts/degree_type')
+    # data = pd.DataFrame({
+    #             'Bachelor':[4087, 4220, 4587, 4636, 4830, 5459, 5901, 6403, 6698],
+    #             'Associate':[1886, 1983, 2112, 1853, 2176, 2899, 3092, 3339, 3426],
+    #             'Master':[1573, 1687, 1802, 1752, 1879, 2286, 2442, 2639, 2807],
+    #             'Certificate': [1320, 1654, 1936, 1842, 2314, 3012, 3467, 4597, 5177] },
+    #             index=range(1, 10))
+    #
+    # data_perc = data.divide(data.sum(axis=1), axis=0)
+    #
+    # plt.stackplot(range(2001,2018, 2),  data_perc["Bachelor"],  data_perc["Associate"],
+    #             data_perc["Master"], data_perc["Certificate"], labels=['Bachelor',
+    #             'Associate','Master', 'Certificate'])
+    #
+    # plt.legend(loc='lower left')
+    # plt.margins(0,0)
+    # plt.xlabel('Year')
+    # plt.ylabel('Percentage')
+    # plt.tick_params(axis='y', which='both', labelleft='on', labelright='on')
+    # plt.title('Awardees by Institution Degree Type')
+    # plt.savefig('../images/stacked_perc_charts/degree_type')
     # plt.show()
+
+    # Age Breakdown
+    df4 = df.filter(['year', 'ageDesc'], axis=1).dropna()
+    df4 = df4[df4['ageDesc'] != 'Unknown']
+
+    yr_2001 = df4[df4['year'] == 2001]
+    counts_2001 = yr_2001['ageDesc'].value_counts(dropna=True, sort=True)
+
+    yr_2017 = df4[df4['year'] == 2017]
+    counts_2017 = yr_2017['ageDesc'].value_counts(dropna=True, sort=True)

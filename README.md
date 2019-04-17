@@ -63,3 +63,12 @@ Awardees of the institutions are more specifically in certain programs. The prog
 
 ![2001](images/program_piecharts/2001.png)  | ![2009](images/program_piecharts/2009.png)  | ![2017](images/program_piecharts/2017.png)
 ------------- | -------------  | -------------
+
+#### Percentage of Awardees from Program Types in 2001 and 2017
+
+Year  | Social Science | Arts/History | Physical/Medical/Wellness | Labor/Trade
+------------- | ------------- | ------------- | ------------- | -------------
+2001  | 22%  | 23%  | 10% | 3%
+2017  | 16%  | 19%  | 18% | 7%
+
+We can see a bit of a shift from traditional programs like Social Sciences, The Arts, and History towards modern programs like computer science, health and wellness, as well as trade programs.
