@@ -6,7 +6,7 @@ Description of the dataset: 'Demographics for all certificate, degree, or formal
 
 ## Breakdown of Institutions' Awardees
 
-There are 29 unique institutions described in the dataset. For any given year, if the awardees associated with the institution was greater than 5% of total awardees for the year, the institution is represented. For all institutions which make up less than or equal to 5% of total awardees, that institution is grouped into 'Other'
+There are 29 unique institutions described in the dataset. For any given year, if the awardees associated with the institution was greater than 5% of total awardees for the year, the institution is represented. For all institutions which make up less than or equal to 5% of total awardees, that institution is grouped into 'Other'.
 
 ![2001](images/institution_piecharts/2001.png)  | ![2009](images/institution_piecharts/2009.png)  | ![2017](images/institution_piecharts/2017.png)
 ------------- | -------------  | -------------
@@ -17,6 +17,17 @@ We see the percent of awardees enrolling in community colleges and other more af
 
 On the flip-side, larger more expensive institutions have seen the percent of awardees decreasing. This can be seen with Colorado State University, University of Colorado Denver, and University of Colorado Boulder from 2001 to 2017.
 
+![2001-2017 stacked chart](images/stacked_perc_charts/intst_type.png)
+
+#### Percentage of Awardees from Institution Types in 2001 and 2017
+
+Year  | Universities | Community Colleges | State Colleges
+------------- | ------------- | ------------- | -------------
+2001  | 62%  | 27%  | 11%
+2017  | 50%  | 34%  | 16%
+
+Taking a more generalized approach, and looking at Universities, Community Colleges, and State Colleges, it is easier to see the same trends. The percentage of students receiving awards from smaller institutions (community colleges and state colleges) is increasing. Meanwhile, the percentage of students receiving awards from larger universities is decreasing.
+
 ## Breakdown of Awarded Degrees
 
 Awardees of the institutions are in various degree programs, which include: Associate, Bachelor, Certificate, Doctoral, Masters, OtherGraduate, Professional, Specialist. We can look at how the breakdown of degrees have changed from 2001 to 2017.
@@ -25,6 +36,17 @@ Awardees of the institutions are in various degree programs, which include: Asso
 ------------- | -------------  | -------------
 
 The percent of awardees enrolling in Bachelor and Masters degree programs have taken a dip from 2001 and 2017, while the percent of those awardees from institutions for Certificate degrees has increased (almost doubled). This seems to support the 'Breakdown of Institutions' analysis - less percentages of people are opting to go with the more expensive education options (large universities and longer degree programs) and more are opting to go with the less expensive options (more affordable universities and shorter degree programs).
+
+![2001-2017 stacked chart](images/stacked_perc_charts/degree_type.png)
+
+#### Percentage of Awardees from Degree Types in 2001 and 2017
+
+Year  | Bachelors | Associate | Masters | Certificate
+------------- | ------------- | ------------- | ------------- | -------------
+2001  | 46%  | 21%  | 18% | 15%
+2017  | 37%  | 19%  | 15% | 29%
+
+The percentage of awards given out to Bachelors students has decreased by almost 10% while awards given out to students gaining Certificates has nearly doubled.
 
 ## Breakdown of Awardees Programs
 
