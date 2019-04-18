@@ -128,12 +128,22 @@ if __name__ == '__main__':
     # plt.savefig('../images/stacked_perc_charts/degree_type')
     # plt.show()
 
-    # Age Breakdown
-    df4 = df.filter(['year', 'ageDesc'], axis=1).dropna()
-    df4 = df4[df4['ageDesc'] != 'Unknown']
+    # Age Breakdown - not much there
+    # df4 = df.filter(['year', 'ageDesc'], axis=1).dropna()
+    # df4 = df4[df4['ageDesc'] != 'Unknown']
+    #
+    # yr_2001 = df4[df4['year'] == 2001]
+    # counts_2001 = yr_2001['ageDesc'].value_counts(dropna=True, sort=True)
+    #
+    # yr_2017 = df4[df4['year'] == 2017]
+    # counts_2017 = yr_2017['ageDesc'].value_counts(dropna=True, sort=True)
 
-    yr_2001 = df4[df4['year'] == 2001]
-    counts_2001 = yr_2001['ageDesc'].value_counts(dropna=True, sort=True)
+    # Residency Breakdown (in/out of state)
+    df5 = df.filter(['year', 'residencyId'], axis=1).dropna()
+    # df4 = df4[df4['residencyId'] != 'Unknown']
 
-    yr_2017 = df4[df4['year'] == 2017]
-    counts_2017 = yr_2017['ageDesc'].value_counts(dropna=True, sort=True)
+    yr_2001 = df5[df5['year'] == 2001]
+    counts_2001 = yr_2001['residencyId'].value_counts(dropna=True, sort=True)
+
+    yr_2017 = df5[df5['year'] == 2017]
+    counts_2017 = yr_2017['residencyId'].value_counts(dropna=True, sort=True)

@@ -72,3 +72,134 @@ Year  | Social Science | Arts/History | Physical/Medical/Wellness | Labor/Trade
 2017  | 16%  | 19%  | 18% | 7%
 
 We can see a bit of a shift from traditional programs like Social Sciences, The Arts, and History towards modern programs like computer science, health and wellness, as well as trade programs.
+
+## Breakdown by Metro Areas
+
+To further break down the analysis into more granular segments, we did similar analysis on seven different 'metro' areas we defined. They are:
+
+* Boulder
+* Colorado Springs
+* Denver
+* Fort Collins
+* Greeley
+* Pueblo
+* Western Slope
+
+### Boulder
+
+#### Breakdown by Institution
+
+![2001](images/boulder/boulder2001_instit.png)  | ![2009](images/boulder/boulder2009_instit.png)  | ![2017](images/boulder/boulder2017_instit.png)
+------------- | -------------  | -------------
+
+#### Breakdown by Degree
+
+![2001](images/boulder/boulder2001_degree.png)  | ![2009](images/boulder/boulder2009_degree.png)  | ![2017](images/boulder/boulder2017_degree.png)
+------------- | -------------  | -------------
+
+#### Breakdown by Program
+
+![2001](images/boulder/boulder2001_prog.png)  | ![2009](images/boulder/boulder2009_prog.png)  | ![2017](images/boulder/boulder2017_prog.png)
+------------- | -------------  | -------------
+
+### Colorado Springs
+
+#### Breakdown by Institution
+
+![2001](images/colorado_springs/csprings2001_instit.png)  | ![2009](images/colorado_springs/csprings2009_instit.png)  | ![2017](images/colorado_springs/csprings2017_instit.png)
+------------- | -------------  | -------------
+
+#### Breakdown by Degree
+
+![2001](images/colorado_springs/csprings2001_degree.png)  | ![2009](images/colorado_springs/csprings2009_degree.png)  | ![2017](images/colorado_springs/csprings2017_degree.png)
+------------- | -------------  | -------------
+
+#### Breakdown by Program
+
+![2001](images/colorado_springs/csprings2001_prog.png)  | ![2009](images/colorado_springs/csprings2009_prog.png)  | ![2017](images/colorado_springs/csprings2017_prog.png)
+------------- | -------------  | -------------
+
+### Denver
+
+#### Breakdown by Institution
+
+![2001](images/denver/denver2001_instit.png)  | ![2009](images/denver/denver2009_instit.png)  | ![2017](images/denver/denver2017_instit.png)
+------------- | -------------  | -------------
+
+#### Breakdown by Degree
+
+![2001](images/denver/denver2001_degree.png)  | ![2009](images/denver/denver2009_degree.png)  | ![2017](images/denver/denver2017_degree.png)
+------------- | -------------  | -------------
+
+#### Breakdown by Program
+
+![2001](images/denver/denver2001_prog.png)  | ![2009](images/denver/denver2009_prog.png)  | ![2017](images/denver/denver2017_prog.png)
+------------- | -------------  | -------------
+
+### Fort Collins
+
+#### Breakdown by Institution
+
+![2001](images/ftcollins/ftcollins2001_instit.png)  | ![2009](images/ftcollins/ftcollins2009_instit.png)  | ![2017](images/ftcollins/ftcollins2017_instit.png)
+------------- | -------------  | -------------
+
+#### Breakdown by Degree
+
+![2001](images/ftcollins/ftcollins2001_degree.png)  | ![2009](images/ftcollins/ftcollins2009_degree.png)  | ![2017](images/ftcollins/ftcollins2017_degree.png)
+------------- | -------------  | -------------
+
+#### Breakdown by Program
+
+![2001](images/ftcollins/ftcollins2001_prog.png)  | ![2009](images/ftcollins/ftcollins2009_prog.png)  | ![2017](images/ftcollins/ftcollins2017_prog.png)
+------------- | -------------  | -------------
+
+### Greeley
+
+#### Breakdown by Institution
+
+![2001](images/greeley/greeley2001_instit.png)  | ![2009](images/greeley/greeley2009_instit.png)  | ![2017](images/greeley/greeley2017_instit.png)
+------------- | -------------  | -------------
+
+#### Breakdown by Degree
+
+![2001](images/greeley/greeley2001_degree.png)  | ![2009](images/greeley/greeley2009_degree.png)  | ![2017](images/greeley/greeley2017_degree.png)
+------------- | -------------  | -------------
+
+#### Breakdown by Program
+
+![2001](images/greeley/greeley2001_prog.png)  | ![2009](images/greeley/greeley2009_prog.png)  | ![2017](images/greeley/greeley2017_prog.png)
+------------- | -------------  | -------------
+
+### Pueblo
+
+#### Breakdown by Institution
+
+![2001](images/pueblo/pueblo2001_instit.png)  | ![2009](images/pueblo/pueblo2009_instit.png)  | ![2017](images/pueblo/pueblo2017_instit.png)
+------------- | -------------  | -------------
+
+#### Breakdown by Degree
+
+![2001](images/pueblo/pueblo2001_degree.png)  | ![2009](images/pueblo/pueblo2009_degree.png)  | ![2017](images/pueblo/pueblo2017_degree.png)
+------------- | -------------  | -------------
+
+#### Breakdown by Program
+
+![2001](images/pueblo/pueblo2001_prog.png)  | ![2009](images/pueblo/pueblo2009_prog.png)  | ![2017](images/pueblo/pueblo2017_prog.png)
+------------- | -------------  | -------------
+
+### Western Slope
+
+#### Breakdown by Institution
+
+![2001](images/wslope/wslope2001_instit.png)  | ![2009](images/wslope/wslope2009_instit.png)  | ![2017](images/wslope/wslope2017_instit.png)
+------------- | -------------  | -------------
+
+#### Breakdown by Degree
+
+![2001](images/wslope/wslope2001_degree.png)  | ![2009](images/wslope/wslope2009_degree.png)  | ![2017](images/wslope/wslope2017_degree.png)
+------------- | -------------  | -------------
+
+#### Breakdown by Program
+
+![2001](images/wslope/wslope2001_prog.png)  | ![2009](images/wslope/wslope2009_prog.png)  | ![2017](images/wslope/wslope2017_prog.png)
+------------- | -------------  | -------------
