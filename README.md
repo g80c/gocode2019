@@ -87,10 +87,15 @@ To further break down the analysis into more granular segments, we did similar a
 
 ### Boulder
 
-#### Breakdown by Institution
+#### Breakdown by Institution Type
 
-![2001](images/boulder/boulder2001_instit.png)  | ![2009](images/boulder/boulder2009_instit.png)  | ![2017](images/boulder/boulder2017_instit.png)
+![2001](images/boulder/boulder2001_type.png)  | ![2009](images/boulder/boulder2009_type.png)  | ![2017](images/boulder/boulder2017_type.png)
 ------------- | -------------  | -------------
+
+Year  | Universities | Community Colleges 
+------------- | ------------- | -------------
+2001  | 62%  | 27%  
+2017  | 50%  | 34%  
 
 #### Breakdown by Degree
 
@@ -104,9 +109,9 @@ To further break down the analysis into more granular segments, we did similar a
 
 ### Colorado Springs
 
-#### Breakdown by Institution
+#### Breakdown by Institution Type
 
-![2001](images/colorado_springs/csprings2001_instit.png)  | ![2009](images/colorado_springs/csprings2009_instit.png)  | ![2017](images/colorado_springs/csprings2017_instit.png)
+![2001](images/colorado_springs/csprings2001_type.png)  | ![2009](images/colorado_springs/csprings2009_type.png)  | ![2017](images/colorado_springs/csprings2017_type.png)
 ------------- | -------------  | -------------
 
 #### Breakdown by Degree
@@ -121,9 +126,9 @@ To further break down the analysis into more granular segments, we did similar a
 
 ### Denver
 
-#### Breakdown by Institution
+#### Breakdown by Institution Type
 
-![2001](images/denver/denver2001_instit.png)  | ![2009](images/denver/denver2009_instit.png)  | ![2017](images/denver/denver2017_instit.png)
+![2001](images/denver/denver2001_type.png)  | ![2009](images/denver/denver2009_type.png)  | ![2017](images/denver/denver2017_type.png)
 ------------- | -------------  | -------------
 
 #### Breakdown by Degree
@@ -138,9 +143,9 @@ To further break down the analysis into more granular segments, we did similar a
 
 ### Fort Collins
 
-#### Breakdown by Institution
+#### Breakdown by Institution Type
 
-![2001](images/ftcollins/ftcollins2001_instit.png)  | ![2009](images/ftcollins/ftcollins2009_instit.png)  | ![2017](images/ftcollins/ftcollins2017_instit.png)
+![2001](images/ftcollins/ftcollins2001_type.png)  | ![2009](images/ftcollins/ftcollins2009_type.png)  | ![2017](images/ftcollins/ftcollins2017_type.png)
 ------------- | -------------  | -------------
 
 #### Breakdown by Degree
@@ -155,9 +160,9 @@ To further break down the analysis into more granular segments, we did similar a
 
 ### Greeley
 
-#### Breakdown by Institution
+#### Breakdown by Institution Type
 
-![2001](images/greeley/greeley2001_instit.png)  | ![2009](images/greeley/greeley2009_instit.png)  | ![2017](images/greeley/greeley2017_instit.png)
+![2001](images/greeley/greeley2001_type.png)  | ![2009](images/greeley/greeley2009_type.png)  | ![2017](images/greeley/greeley2017_type.png)
 ------------- | -------------  | -------------
 
 #### Breakdown by Degree
@@ -172,9 +177,9 @@ To further break down the analysis into more granular segments, we did similar a
 
 ### Pueblo
 
-#### Breakdown by Institution
+#### Breakdown by Institution Type
 
-![2001](images/pueblo/pueblo2001_instit.png)  | ![2009](images/pueblo/pueblo2009_instit.png)  | ![2017](images/pueblo/pueblo2017_instit.png)
+![2001](images/pueblo/pueblo2001_type.png)  | ![2009](images/pueblo/pueblo2009_type.png)  | ![2017](images/pueblo/pueblo2017_type.png)
 ------------- | -------------  | -------------
 
 #### Breakdown by Degree
@@ -189,9 +194,9 @@ To further break down the analysis into more granular segments, we did similar a
 
 ### Western Slope
 
-#### Breakdown by Institution
+#### Breakdown by Institution Type
 
-![2001](images/wslope/wslope2001_instit.png)  | ![2009](images/wslope/wslope2009_instit.png)  | ![2017](images/wslope/wslope2017_instit.png)
+![2001](images/wslope/wslope2001_type.png)  | ![2009](images/wslope/wslope2009_type.png)  | ![2017](images/wslope/wslope2017_type.png)
 ------------- | -------------  | -------------
 
 #### Breakdown by Degree
