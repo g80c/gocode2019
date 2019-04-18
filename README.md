@@ -92,15 +92,20 @@ To further break down the analysis into more granular segments, we did similar a
 ![2001](images/boulder/boulder2001_type.png)  | ![2009](images/boulder/boulder2009_type.png)  | ![2017](images/boulder/boulder2017_type.png)
 ------------- | -------------  | -------------
 
-Year  | Universities | Community Colleges 
+<!-- Year  | Universities | Community Colleges 
 ------------- | ------------- | -------------
-2001  | 62%  | 27%  
-2017  | 50%  | 34%  
+2001  | 77%  | 23%  
+2017  | 63%  | 37%   -->
 
 #### Breakdown by Degree
 
 ![2001](images/boulder/boulder2001_degree.png)  | ![2009](images/boulder/boulder2009_degree.png)  | ![2017](images/boulder/boulder2017_degree.png)
 ------------- | -------------  | -------------
+
+<!-- Year  | Bachelors | Associate | Masters | Certificate
+------------- | ------------- | ------------- | ------------- | -------------
+2001  | 46%  | 21%  | 18% | 15%
+2017  | 37%  | 19%  | 15% | 29% -->
 
 #### Breakdown by Program
 
