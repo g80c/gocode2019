@@ -1,10 +1,16 @@
+# GoCode Info:
+  - Video:
+
+
 # GoCode Colorado - Analysis
 
-The first dataset we focused on was 'Degrees Awarded to Post-Secondary Graduates in Colorado'.
+We focused on many datasets for this competition.  Our focus was on four data type structures: business, GDP, college degrees, and college finances.    
+
+The first dataset we focused on was 'Degrees Awarded to Post-Secondary Graduates in Colorado'.  
 
 Description of the dataset: 'Demographics for all certificate, degree, or formal award approved by Colorado Department of Higher Education (CDHE) for students since 2001. Demographics include data on age, ethnicity, program name, and residency.'
 
-## Breakdown of Institutions' Awardees
+# Breakdown of Institutions' Awardees
 
 There are 29 unique institutions described in the dataset. For any given year, if the awardees associated with the institution was greater than 5% of total awardees for the year, the institution is represented. For all institutions which make up less than or equal to 5% of total awardees, that institution is grouped into 'Other'.
 
@@ -73,6 +79,8 @@ Year  | Social Science | Arts/History | Physical/Medical/Wellness | Labor/Trade
 
 We can see a bit of a shift from traditional programs like Social Sciences, The Arts, and History towards modern programs like computer science, health and wellness, as well as trade programs.
 
+
+
 ## Breakdown by Metro Areas
 
 To further break down the analysis into more granular segments, we did similar analysis on seven different 'metro' areas we defined. They are:
@@ -92,7 +100,7 @@ To further break down the analysis into more granular segments, we did similar a
 ![2001](images/boulder/boulder2001_type.png)  | ![2009](images/boulder/boulder2009_type.png)  | ![2017](images/boulder/boulder2017_type.png)
 ------------- | -------------  | -------------
 
-<!-- Year  | Universities | Community Colleges 
+<!-- Year  | Universities | Community Colleges
 ------------- | ------------- | -------------
 2001  | 77%  | 23%  
 2017  | 63%  | 37%   -->
@@ -213,3 +221,13 @@ To further break down the analysis into more granular segments, we did similar a
 
 ![2001](images/wslope/wslope2001_prog.png)  | ![2009](images/wslope/wslope2009_prog.png)  | ![2017](images/wslope/wslope2017_prog.png)
 ------------- | -------------  | -------------
+
+
+# Breakdown of Business entity data
+
+The next step we took was looking into what business entities where captured within Colorado. This section combined data from many sources. We combined population data, state GDP data, and state real GDP per capita.
+
+![](images/Top4EntityStatusofAllBusinessesFormed2001-2017.png)
+![](images/Top3EntityTypesofAllBusinessesFormed2001-2017.png)
+
+![](images/PopulationPerYearinColorado2001-2017.png)
