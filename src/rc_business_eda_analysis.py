@@ -395,13 +395,13 @@ if __name__ == '__main__':
 
     # number of businesses formed per year - linear regression
     linear_regression(count_per_year, 'year', 'total', 'State Number of Businesses Formed Per Year', 'Year', 'Number of Businesses', y_min=0, y_max=110000)
-    linear_regression(count_per_year, 'year', 'population', 'State Population Per Year', 'Year', 'Population', y_min=0, y_max=6000000)
+    linear_regression(count_per_year, 'year', 'population', 'State Population Per Year', 'Year', 'Population', y_min=4000000, y_max=6000000)
     linear_regression(count_per_year, 'year', 'bus_formed_per_1000_residents', 'State Businesses Formed Per 1000 Residents', 'Year', 'Number of Businesses Per 1000 Residents')
 
     # real gdp per capita
     linear_regression(df_co_gdp, 'year', 'real_gdp_per_capita', 'State Real GDP Per Capita 2001-2017 Zoomed', 'Year', 'Real GDP Per Capita (chained 2012 dollars)')
-    linear_regression(df_co_gdp, 'year', 'real_gdp_per_capita', 'State Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2012 dollars)', y_min=0, y_max=72000)
-    simple_line_plot(df_co_gdp, 'year', 'real_gdp_per_capita', 'Year', 'Real GDP Per Capita (chained 2012 dollars)', 'State Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=0, y_max=72000)
+    linear_regression(df_co_gdp, 'year', 'real_gdp_per_capita', 'State Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2012 dollars)', y_min=20000, y_max=72000)
+    simple_line_plot(df_co_gdp, 'year', 'real_gdp_per_capita', 'Year', 'Real GDP Per Capita (chained 2012 dollars)', 'State Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=20000, y_max=72000)
 
 
     '''Create new dataframes for each metro area'''
@@ -452,7 +452,7 @@ if __name__ == '__main__':
 
     # real gdp per capita
     linear_regression(df_gdp_denver, 'year', 'real_per_capita_gdp', 'Denver Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2009 dollars)')
-    simple_line_plot(df_gdp_denver, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Denver Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=0, y_max=72000)
+    simple_line_plot(df_gdp_denver, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Denver Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=20000, y_max=72000)
     simple_line_plot(df_gdp_denver, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Denver Real GDP Per Capita 2001-2017 Zoomed', label_vert='vertical')
 
 
@@ -494,7 +494,7 @@ if __name__ == '__main__':
 
     # real gdp per capita
     linear_regression(df_gdp_col_springs, 'year', 'real_per_capita_gdp', 'Colorado Springs Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2009 dollars)')
-    simple_line_plot(df_gdp_col_springs, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Colorado Springs Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=0, y_max=72000)
+    simple_line_plot(df_gdp_col_springs, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Colorado Springs Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=20000, y_max=72000)
     simple_line_plot(df_gdp_col_springs, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Colorado Springs Real GDP Per Capita 2001-2017 Zoomed', label_vert='vertical')
 
 
@@ -536,7 +536,7 @@ if __name__ == '__main__':
 
     # real gdp per capita
     linear_regression(df_gdp_greeley, 'year', 'real_per_capita_gdp', 'Greeley Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2009 dollars)')
-    simple_line_plot(df_gdp_greeley, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Greeley Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=0, y_max=72000)
+    simple_line_plot(df_gdp_greeley, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Greeley Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=20000, y_max=72000)
     simple_line_plot(df_gdp_greeley, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Greeley Real GDP Per Capita 2001-2017 Zoomed', label_vert='vertical')
 
 
@@ -578,7 +578,7 @@ if __name__ == '__main__':
 
     # real gdp per capita
     linear_regression(df_gdp_pueblo, 'year', 'real_per_capita_gdp', 'Pueblo Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2009 dollars)')
-    simple_line_plot(df_gdp_pueblo, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Pueblo Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=0, y_max=72000)
+    simple_line_plot(df_gdp_pueblo, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Pueblo Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=20000, y_max=72000)
     simple_line_plot(df_gdp_pueblo, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Pueblo Real GDP Per Capita 2001-2017 Zoomed', label_vert='vertical')
 
 
@@ -620,7 +620,7 @@ if __name__ == '__main__':
 
     # real gdp per capita
     linear_regression(df_gdp_fort_col, 'year', 'real_per_capita_gdp', 'Fort Collins Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2009 dollars)')
-    simple_line_plot(df_gdp_fort_col, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Fort Collins Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=0, y_max=72000)
+    simple_line_plot(df_gdp_fort_col, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Fort Collins Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=20000, y_max=72000)
     simple_line_plot(df_gdp_fort_col, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Fort Collins Real GDP Per Capita 2001-2017 Zoomed', label_vert='vertical')
 
 
@@ -662,7 +662,7 @@ if __name__ == '__main__':
 
     # real gdp per capita
     linear_regression(df_gdp_boulder, 'year', 'real_per_capita_gdp', 'Boulder Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2009 dollars)')
-    simple_line_plot(df_gdp_boulder, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Boulder Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=0, y_max=72000)
+    simple_line_plot(df_gdp_boulder, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Boulder Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=20000, y_max=72000)
     simple_line_plot(df_gdp_boulder, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Boulder Real GDP Per Capita 2001-2017 Zoomed', label_vert='vertical')
 
     '''Grand Junction Metro Area'''
@@ -703,7 +703,7 @@ if __name__ == '__main__':
 
     # real gdp per capita
     linear_regression(df_gdp_grand_junc, 'year', 'real_per_capita_gdp', 'Grand Junction Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2009 dollars)')
-    simple_line_plot(df_gdp_grand_junc, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Grand Junction Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=0, y_max=72000)
+    simple_line_plot(df_gdp_grand_junc, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Grand Junction Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=20000, y_max=72000)
     simple_line_plot(df_gdp_grand_junc, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Grand Junction Real GDP Per Capita 2001-2017 Zoomed', label_vert='vertical')
 
 
