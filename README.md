@@ -324,7 +324,7 @@ Metro Areas:
 * Pueblo
 
 
-#### Boulder Metro Area
+### Boulder Metro Area
 
 Total Number of Businesses Formed in Boulder:  87,542
 
@@ -361,7 +361,7 @@ Real Per Capita GDP (chained 2009 dollars) Trends:
 Real Per Capita GDP | Real Per Capita GDP Zoomed-in
 
 
-#### Colorado Springs Metro Area
+### Colorado Springs Metro Area
 
 Total Number of Businesses Formed in Colorado Springs:  110,486
 
@@ -399,7 +399,7 @@ Real Per Capita GDP (chained 2009 dollars) Trends:
 Real Per Capita GDP | Real Per Capita GDP Zoomed-in
 
 
-#### Denver (Denver-Aurora-Lakewood) Metro Area
+### Denver (Denver-Aurora-Lakewood) Metro Area
 
 Total Number of Businesses Formed in Denver: 615,787
 
@@ -435,7 +435,7 @@ Real Per Capita GDP (chained 2009 dollars) Trends:
 Real Per Capita GDP | Real Per Capita GDP Zoomed-in
 
 
-#### Grand Junction Metro Area
+### Grand Junction Metro Area
 
 Total Number of Businesses Formed in Grand Junction: 25,141
 
@@ -471,7 +471,7 @@ Real Per Capita GDP (chained 2009 dollars) Trends:
 Real Per Capita GDP | Real Per Capita GDP Zoomed-in
 
 
-#### Greeley Metro Area
+### Greeley Metro Area
 
 Total Number of Businesses Formed in Greeley: 44,006
 
@@ -507,7 +507,7 @@ Real Per Capita GDP (chained 2009 dollars) Trends:
 Real Per Capita GDP | Real Per Capita GDP Zoomed-in
 
 
-#### Fort Collins Metro Area
+### Fort Collins Metro Area
 
 Total Number of Businesses Formed in Fort Collins: 64,084
 
@@ -543,7 +543,7 @@ Real Per Capita GDP (chained 2009 dollars) Trends:
 Real Per Capita GDP | Real Per Capita GDP Zoomed-in
 
 
-#### Pueblo Metro Area
+### Pueblo Metro Area
 
 Total Number of Businesses Formed in Pueblo: 14,930
 
@@ -579,8 +579,6 @@ Real Per Capita GDP (chained 2009 dollars) Trends:
 Real Per Capita GDP | Real Per Capita GDP Zoomed-in
 
 
-
-# SCOTTTT TTTTTT TTTTTT TTTTT TTT
 
 # Breakdown of Financial Entity Data
 
