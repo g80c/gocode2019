@@ -376,8 +376,9 @@ if __name__ == '__main__':
     count_per_year = per_x_residents(count_per_year, 'bus_formed_per_1000_residents', 'total', 'population', 1000, 2)
     print('Number of Businesses Formed Per Year: \n ', count_per_year)
     simple_line_plot(count_per_year, 'year', 'bus_formed_per_1000_residents', 'Year', 'Number of Businesses (per 1000 residents)', 'Businesses Formed Per 1000 Residents in Colorado 2001-2017', label_vert='vertical')
-    simple_line_plot(count_per_year, 'year', 'population', 'Year', 'Population', 'Population Per Year in Colorado 2001-2017', label_vert='vertical')
-    simple_line_plot(count_per_year, 'year', 'total', 'Year', 'Number of Businesses Formed', 'Number of Businesses Formed Per Year in Colorado 2001-2017', label_vert='vertical')
+    simple_line_plot(count_per_year, 'year', 'population', 'Year', 'Population', 'Population Per Year in Colorado 2001-2017 Zoomed', label_vert='vertical')
+    simple_line_plot(count_per_year, 'year', 'population', 'Year', 'Population', 'Population Per Year in Colorado 2001-2017', label_vert='vertical', y_min=0, y_max=6000000)
+    simple_line_plot(count_per_year, 'year', 'total', 'Year', 'Number of Businesses Formed', 'Number of Businesses Formed Per Year in Colorado 2001-2017', label_vert='vertical', y_min=0, y_max=110000)
 
     count_entity_type = counts(df_bus_all, 'entitytype', 'entityid', 'entityid')
     count_entity_type = percentage(count_entity_type, 'total', total_num_business, 'percent_total', 2)
@@ -398,9 +399,13 @@ if __name__ == '__main__':
     linear_regression(count_per_year, 'year', 'population', 'State Population Per Year', 'Year', 'Population', y_min=4000000, y_max=6000000)
     linear_regression(count_per_year, 'year', 'bus_formed_per_1000_residents', 'State Businesses Formed Per 1000 Residents', 'Year', 'Number of Businesses Per 1000 Residents')
 
+    #state gdp
+    simple_line_plot(df_co_gdp, 'year', 'gdp_millions', 'Year', 'State GDP (millions)', 'State GDP 2001-2017 in Current Dollars', label_vert='vertical', y_min=100000, y_max=400000)
+    linear_regression(df_co_gdp, 'year', 'gdp_millions', 'State GDP 2001-2017 Linear Regression in Current Dollars', 'Year', 'State GDP (millions)', y_min=100000, y_max=400000)
+
     # real gdp per capita
-    linear_regression(df_co_gdp, 'year', 'real_gdp_per_capita', 'State Real GDP Per Capita 2001-2017 Zoomed', 'Year', 'Real GDP Per Capita (chained 2012 dollars)')
-    linear_regression(df_co_gdp, 'year', 'real_gdp_per_capita', 'State Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2012 dollars)', y_min=20000, y_max=72000)
+    #linear_regression(df_co_gdp, 'year', 'real_gdp_per_capita', 'State Real GDP Per Capita 2001-2017 Zoomed', 'Year', 'Real GDP Per Capita (chained 2012 dollars)')
+    linear_regression(df_co_gdp, 'year', 'real_gdp_per_capita', 'State Real GDP Per Capita 2001-2017 Linear Regression', 'Year', 'Real GDP Per Capita (chained 2012 dollars)', y_min=20000, y_max=72000)
     simple_line_plot(df_co_gdp, 'year', 'real_gdp_per_capita', 'Year', 'Real GDP Per Capita (chained 2012 dollars)', 'State Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=20000, y_max=72000)
 
 
@@ -437,7 +442,7 @@ if __name__ == '__main__':
     count_denver = counts(df_denver, 'year', 'entityid', 'year')
     count_denver = percentage(count_denver, 'total', total_bus_denver, 'percent_total', 2)
     print('Number of Businesses Formed Per Year in Denver: \n ', count_denver)
-    simple_line_plot(count_denver, 'year', 'total', 'Year', 'Number of Businesses Formed', 'Number of Businesses Formed Per Year in Denver 2001-2017', label_vert='vertical')
+    simple_line_plot(count_denver, 'year', 'total', 'Year', 'Number of Businesses Formed', 'Number of Businesses Formed Per Year in Denver 2001-2017', label_vert='vertical', y_min=0, y_max=60000)
 
     entity_type_denver = counts(df_denver, 'entitytype', 'entityid', 'entityid')
     entity_type_denver = percentage(entity_type_denver, 'total', total_bus_denver, 'percent_total', 2)
@@ -448,10 +453,10 @@ if __name__ == '__main__':
     df_gdp_denver = pd.merge(df_gdp_denver, denver_gdp_pc, on='year', how='left')
 
     # number of businesses formed per year - linear regression
-    linear_regression(count_denver, 'year', 'total', 'Denver Number of Businesses Formed Per Year', 'Year', 'Number of Businesses')
+    linear_regression(count_denver, 'year', 'total', 'Denver Number of Businesses Formed Per Year', 'Year', 'Number of Businesses', y_min=0, y_max=60000)
 
     # real gdp per capita
-    linear_regression(df_gdp_denver, 'year', 'real_per_capita_gdp', 'Denver Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2009 dollars)')
+    linear_regression(df_gdp_denver, 'year', 'real_per_capita_gdp', 'Denver Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', y_min=0, y_max=72000)
     simple_line_plot(df_gdp_denver, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Denver Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=20000, y_max=72000)
     simple_line_plot(df_gdp_denver, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Denver Real GDP Per Capita 2001-2017 Zoomed', label_vert='vertical')
 
@@ -479,7 +484,7 @@ if __name__ == '__main__':
     count_col_springs = counts(df_col_springs, 'year', 'entityid', 'year')
     count_col_springs = percentage(count_col_springs, 'total', total_bus_col_springs, 'percent_total', 2)
     print('Number of Businesses Formed Per Year in Colorado Springs: \n ', count_col_springs)
-    simple_line_plot(count_col_springs, 'year', 'total', 'Year', 'Number of Businesses Formed', 'Number of Businesses Formed Per Year in Colorado Springs 2001-2017', label_vert='vertical')
+    simple_line_plot(count_col_springs, 'year', 'total', 'Year', 'Number of Businesses Formed', 'Number of Businesses Formed Per Year in Colorado Springs 2001-2017', label_vert='vertical', y_min=0, y_max=15000)
 
     entity_type_col_springs = counts(df_col_springs, 'entitytype', 'entityid', 'entityid')
     entity_type_col_springs = percentage(entity_type_col_springs, 'total', total_bus_col_springs, 'percent_total', 2)
@@ -490,10 +495,10 @@ if __name__ == '__main__':
     df_gdp_col_springs = pd.merge(df_gdp_col_springs, col_springs_gdp_pc, on='year', how='left')
 
     # number of businesses formed per year - linear regression
-    linear_regression(count_col_springs, 'year', 'total', 'Colorado Springs Number of Businesses Formed Per Year', 'Year', 'Number of Businesses')
+    linear_regression(count_col_springs, 'year', 'total', 'Colorado Springs Number of Businesses Formed Per Year', 'Year', 'Number of Businesses', y_min=0, y_max=15000)
 
     # real gdp per capita
-    linear_regression(df_gdp_col_springs, 'year', 'real_per_capita_gdp', 'Colorado Springs Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2009 dollars)')
+    linear_regression(df_gdp_col_springs, 'year', 'real_per_capita_gdp', 'Colorado Springs Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', y_min=0, y_max=72000)
     simple_line_plot(df_gdp_col_springs, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Colorado Springs Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=20000, y_max=72000)
     simple_line_plot(df_gdp_col_springs, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Colorado Springs Real GDP Per Capita 2001-2017 Zoomed', label_vert='vertical')
 
@@ -521,7 +526,7 @@ if __name__ == '__main__':
     count_greeley = counts(df_greeley, 'year', 'entityid', 'year')
     count_greeley = percentage(count_greeley, 'total', total_bus_greeley, 'percent_total', 2)
     print('Number of Businesses Formed Per Year in Greeley: \n ', count_greeley)
-    simple_line_plot(count_greeley, 'year', 'total', 'Year', 'Number of Businesses Formed', 'Number of Businesses Formed Per Year in Greeley 2001-2017', label_vert='vertical')
+    simple_line_plot(count_greeley, 'year', 'total', 'Year', 'Number of Businesses Formed', 'Number of Businesses Formed Per Year in Greeley 2001-2017', label_vert='vertical', y_min=0, y_max=5000)
 
     entity_type_greeley = counts(df_greeley, 'entitytype', 'entityid', 'entityid')
     entity_type_greeley = percentage(entity_type_greeley, 'total', total_bus_greeley, 'percent_total', 2)
@@ -532,10 +537,10 @@ if __name__ == '__main__':
     df_gdp_greeley = pd.merge(df_gdp_greeley, greeley_gdp_pc, on='year', how='left')
 
     # number of businesses formed per year - linear regression
-    linear_regression(count_greeley, 'year', 'total', 'Greeley Number of Businesses Formed Per Year', 'Year', 'Number of Businesses')
+    linear_regression(count_greeley, 'year', 'total', 'Greeley Number of Businesses Formed Per Year', 'Year', 'Number of Businesses', y_min=0, y_max=5000)
 
     # real gdp per capita
-    linear_regression(df_gdp_greeley, 'year', 'real_per_capita_gdp', 'Greeley Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2009 dollars)')
+    linear_regression(df_gdp_greeley, 'year', 'real_per_capita_gdp', 'Greeley Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', y_min=20000, y_max=72000)
     simple_line_plot(df_gdp_greeley, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Greeley Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=20000, y_max=72000)
     simple_line_plot(df_gdp_greeley, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Greeley Real GDP Per Capita 2001-2017 Zoomed', label_vert='vertical')
 
@@ -563,7 +568,7 @@ if __name__ == '__main__':
     count_pueblo = counts(df_pueblo, 'year', 'entityid', 'year')
     count_pueblo = percentage(count_pueblo, 'total', total_bus_pueblo, 'percent_total', 2)
     print('Number of Businesses Formed Per Year in Pueblo: \n ', count_pueblo)
-    simple_line_plot(count_pueblo, 'year', 'total', 'Year', 'Number of Businesses Formed', 'Number of Businesses Formed Per Year in Pueblo 2001-2017', label_vert='vertical')
+    simple_line_plot(count_pueblo, 'year', 'total', 'Year', 'Number of Businesses Formed', 'Number of Businesses Formed Per Year in Pueblo 2001-2017', label_vert='vertical', y_min=0, y_max=2000)
 
     entity_type_pueblo = counts(df_pueblo, 'entitytype', 'entityid', 'entityid')
     entity_type_pueblo = percentage(entity_type_pueblo, 'total', total_bus_pueblo, 'percent_total', 2)
@@ -574,10 +579,10 @@ if __name__ == '__main__':
     df_gdp_pueblo = pd.merge(df_gdp_pueblo, pueblo_gdp_pc, on='year', how='left')
 
     # number of businesses formed per year - linear regression
-    linear_regression(count_pueblo, 'year', 'total', 'Pueblo Number of Businesses Formed Per Year', 'Year', 'Number of Businesses')
+    linear_regression(count_pueblo, 'year', 'total', 'Pueblo Number of Businesses Formed Per Year', 'Year', 'Number of Businesses', y_min=0, y_max=2000)
 
     # real gdp per capita
-    linear_regression(df_gdp_pueblo, 'year', 'real_per_capita_gdp', 'Pueblo Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2009 dollars)')
+    linear_regression(df_gdp_pueblo, 'year', 'real_per_capita_gdp', 'Pueblo Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', y_min=20000, y_max=72000)
     simple_line_plot(df_gdp_pueblo, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Pueblo Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=20000, y_max=72000)
     simple_line_plot(df_gdp_pueblo, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Pueblo Real GDP Per Capita 2001-2017 Zoomed', label_vert='vertical')
 
@@ -605,7 +610,7 @@ if __name__ == '__main__':
     count_fort_col = counts(df_fort_col, 'year', 'entityid', 'year')
     count_fort_col = percentage(count_fort_col, 'total', total_bus_fort_col, 'percent_total', 2)
     print('Number of Businesses Formed Per Year in Fort Collins: \n ', count_fort_col)
-    simple_line_plot(count_fort_col, 'year', 'total', 'Year', 'Number of Businesses Formed', 'Number of Businesses Formed Per Year in Fort Collins 2001-2017', label_vert='vertical')
+    simple_line_plot(count_fort_col, 'year', 'total', 'Year', 'Number of Businesses Formed', 'Number of Businesses Formed Per Year in Fort Collins 2001-2017', label_vert='vertical', y_min=0, y_max=6000)
 
     entity_type_fort_col = counts(df_fort_col, 'entitytype', 'entityid', 'entityid')
     entity_type_fort_col = percentage(entity_type_fort_col, 'total', total_bus_fort_col, 'percent_total', 2)
@@ -616,10 +621,10 @@ if __name__ == '__main__':
     df_gdp_fort_col = pd.merge(df_gdp_fort_col, fort_col_gdp_pc, on='year', how='left')
 
     # number of businesses formed per year - linear regression
-    linear_regression(count_fort_col, 'year', 'total', 'Fort Collins Number of Businesses Formed Per Year', 'Year', 'Number of Businesses')
+    linear_regression(count_fort_col, 'year', 'total', 'Fort Collins Number of Businesses Formed Per Year', 'Year', 'Number of Businesses', y_min=0, y_max=6000)
 
     # real gdp per capita
-    linear_regression(df_gdp_fort_col, 'year', 'real_per_capita_gdp', 'Fort Collins Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2009 dollars)')
+    linear_regression(df_gdp_fort_col, 'year', 'real_per_capita_gdp', 'Fort Collins Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', y_min=20000, y_max=72000)
     simple_line_plot(df_gdp_fort_col, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Fort Collins Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=20000, y_max=72000)
     simple_line_plot(df_gdp_fort_col, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Fort Collins Real GDP Per Capita 2001-2017 Zoomed', label_vert='vertical')
 
@@ -647,7 +652,7 @@ if __name__ == '__main__':
     count_boulder = counts(df_boulder, 'year', 'entityid', 'year')
     count_boulder = percentage(count_boulder, 'total', total_bus_boulder, 'percent_total', 2)
     print('Number of Businesses Formed Per Year in Boulder: \n ', count_boulder)
-    simple_line_plot(count_boulder, 'year', 'total', 'Year', 'Number of Businesses Formed', 'Number of Businesses Formed Per Year in Boulder 2001-2017', label_vert='vertical')
+    simple_line_plot(count_boulder, 'year', 'total', 'Year', 'Number of Businesses Formed', 'Number of Businesses Formed Per Year in Boulder 2001-2017', label_vert='vertical', y_min=0, y_max=8000)
 
     entity_type_boulder = counts(df_boulder, 'entitytype', 'entityid', 'entityid')
     entity_type_boulder = percentage(entity_type_boulder, 'total', total_bus_boulder, 'percent_total', 2)
@@ -658,10 +663,10 @@ if __name__ == '__main__':
     df_gdp_boulder = pd.merge(df_gdp_boulder, boulder_gdp_pc, on='year', how='left')
 
     # number of businesses formed per year - linear regression
-    linear_regression(count_boulder, 'year', 'total', 'Boulder Number of Businesses Formed Per Year', 'Year', 'Number of Businesses')
+    linear_regression(count_boulder, 'year', 'total', 'Boulder Number of Businesses Formed Per Year', 'Year', 'Number of Businesses', y_min=0, y_max=8000)
 
     # real gdp per capita
-    linear_regression(df_gdp_boulder, 'year', 'real_per_capita_gdp', 'Boulder Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2009 dollars)')
+    linear_regression(df_gdp_boulder, 'year', 'real_per_capita_gdp', 'Boulder Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', y_min=20000, y_max=72000)
     simple_line_plot(df_gdp_boulder, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Boulder Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=20000, y_max=72000)
     simple_line_plot(df_gdp_boulder, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Boulder Real GDP Per Capita 2001-2017 Zoomed', label_vert='vertical')
 
@@ -688,7 +693,7 @@ if __name__ == '__main__':
     count_grand_junc = counts(df_grand_junc, 'year', 'entityid', 'year')
     count_grand_junc = percentage(count_grand_junc, 'total', total_bus_grand_junc, 'percent_total', 2)
     print('Number of Businesses Formed Per Year in Grand Junction: \n ', count_grand_junc)
-    simple_line_plot(count_grand_junc, 'year', 'total', 'Year', 'Number of Businesses Formed', 'Number of Businesses Formed Per Year in Grand Junction 2001-2017', label_vert='vertical')
+    simple_line_plot(count_grand_junc, 'year', 'total', 'Year', 'Number of Businesses Formed', 'Number of Businesses Formed Per Year in Grand Junction 2001-2017', label_vert='vertical', y_min=0, y_max=2500)
 
     entity_type_grand_junc = counts(df_grand_junc, 'entitytype', 'entityid', 'entityid')
     entity_type_grand_junc = percentage(entity_type_grand_junc, 'total', total_bus_grand_junc, 'percent_total', 2)
@@ -699,10 +704,10 @@ if __name__ == '__main__':
     df_gdp_grand_junc = pd.merge(df_gdp_grand_junc, grand_junc_gdp_pc, on='year', how='left')
 
     # number of businesses formed per year - linear regression
-    linear_regression(count_grand_junc, 'year', 'total', 'Grand Junction Number of Businesses Formed Per Year', 'Year', 'Number of Businesses')
+    linear_regression(count_grand_junc, 'year', 'total', 'Grand Junction Number of Businesses Formed Per Year', 'Year', 'Number of Businesses', y_min=0, y_max=2500)
 
     # real gdp per capita
-    linear_regression(df_gdp_grand_junc, 'year', 'real_per_capita_gdp', 'Grand Junction Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2009 dollars)')
+    linear_regression(df_gdp_grand_junc, 'year', 'real_per_capita_gdp', 'Grand Junction Real GDP Per Capita 2001-2017', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', y_min=20000, y_max=72000)
     simple_line_plot(df_gdp_grand_junc, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Grand Junction Real GDP Per Capita 2001-2017', label_vert='vertical', y_min=20000, y_max=72000)
     simple_line_plot(df_gdp_grand_junc, 'year', 'real_per_capita_gdp', 'Year', 'Real GDP Per Capita (chained 2009 dollars)', 'Grand Junction Real GDP Per Capita 2001-2017 Zoomed', label_vert='vertical')
 
