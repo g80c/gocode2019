@@ -152,6 +152,8 @@ def linear_regression(dataframe, X, y, title, xlabel, ylabel, y_min=False, y_max
     lr = LinearRegression()
     lr.fit(X, y)
     y_predict = lr.predict(X)
+    r_squared = lr.score(X, y)
+    print("R-squared: ", r_squared)
     new_title = title.replace(' ', '')
     plt.scatter(X, y, alpha=0.4)
     plt.plot(X, y_predict)

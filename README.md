@@ -1,9 +1,11 @@
 # GoCode Info:
-  - Video:
+
+Loom Video Link: [Put Link Here]
+
 
 # Introduction
 
-Where would you start a business?  Why would you chose that location?  Would it be worth moving or hiring from other regions to increase your chances of success?  In this analysis we will explore factors that should help guide you to choosing the best place to start your business.
+Where would you start a business?  Why would you chose that location?  Would it be worth moving or hiring from other regions to increase your chances of success?  In this analysis we will explore factors that should help guide you to choosing the best place to start your business or where to hire from.
 
 # Methodology
 
@@ -15,6 +17,148 @@ We focused on many datasets for this competition.  Our focus was on four data ty
 The first dataset we focused on was 'Degrees Awarded to Post-Secondary Graduates in Colorado'.  
 
 Description of the dataset: 'Demographics for all certificate, degree, or formal award approved by Colorado Department of Higher Education (CDHE) for students since 2001. Demographics include data on age, ethnicity, program name, and residency.'
+
+
+# Breakdown of Financial Entity Data
+
+There are 29 unique institutions described in the dataset. For any given year, if the awardees associated with the institution was greater than 5% of total awardees for the year, the institution is represented. For all institutions which make up less than or equal to 5% of total awardees, that institution is grouped into 'Other'.
+
+![2001](images/plots/yearly/pie_sum_2004.png)  | ![2009](images/plots/yearly/pie_sum_2009.png)  | ![2017](images/plots/yearly/pie_sum_2006.png)
+------------- | -------------  | -------------
+
+From 2004 to 2016 we can see still about half of students were using federal loans to pay for college. State aid paid to university stayed consistent percentage wise, hovering around 8-9%.
+
+The data set does not look to include private loans or paying for school out of pocket.  This information could be useful for future analysis into indebtedness of students.
+
+Looking at total federal loans and State aid we can see there is a large increase from 2004 to 2016.
+
+![](images/plots/state_aid_sum_inst.png)
+
+![](images/plots/federal_loans_sum_inst.png)
+
+State aid was stagnant after the recession of 2009 while federal loans continued to climb.  State aid doubled from 2004 to 2016 giving students about 160 million is aid.  Federal loans nearly doubled as well indebting students by about 800 million dollars in 2016.
+
+Scholarship levels have shown continual growth from 2004 - 2016.  
+![](images/plots/scholar_sum_inst.png)
+
+
+what we are seeing is students have incurred more debt but they have also gained more aid from the State and more scholarships are being given out.
+
+
+## Breakdown by Metro Areas
+
+To further break down the analysis into more granular segments, we did similar analysis on seven different 'metro' areas we defined. They are:
+
+* Boulder
+* Colorado Springs
+* Denver
+* Fort Collins
+* Greeley
+* Pueblo
+* Grand Junction / Western Slope
+
+![](images/plots/state_aid_sum_region.png) |![](images/plots/federal_loans_sum_region.png) |![](images/plots/scholar_sum_region.png)
+------------- | -------------  | -------------
+### Boulder
+
+#### Breakdown by Aid Type
+
+![2004](images/plots/region_year/pie_sum_0.png)  | ![2009](images/plots/region_year/pie_sum_5.png)  | ![2016](images/plots/region_year/pie_sum_12.png)
+------------- | -------------  | -------------
+
+
+#### Average Breakdown by Aid Type 2004-2016
+
+![](images/plots/region/pie_sum_0.png)
+
+
+
+### Colorado Springs
+
+#### Breakdown by Aid Type
+
+![2004](images/plots/region_year/pie_sum_13.png)  | ![2009](images/plots/region_year/pie_sum_18.png)  | ![2016](images/plots/region_year/pie_sum_25.png)
+------------- | -------------  | -------------
+
+#### Average Breakdown by Aid Type 2004-2016
+
+![](images/plots/region/pie_sum_1.png)  
+
+### Denver
+
+#### Breakdown by Aid Type
+
+![2004](images/plots/region_year/pie_sum_26.png)  | ![2009](images/plots/region_year/pie_sum_31.png)  | ![2016](images/plots/region_year/pie_sum_38.png)
+------------- | -------------  | -------------
+
+#### Average Breakdown by Aid Type 2004-2016
+
+![2001](images/plots/region/pie_sum_2.png)
+
+### Fort Collins
+
+#### Breakdown by Aid Type
+
+![2004](images/plots/region_year/pie_sum_39.png)  | ![2009](images/plots/region_year/pie_sum_44.png)  | ![2016](images/plots/region_year/pie_sum_51.png)
+------------- | -------------  | -------------
+
+#### Breakdown by Aid Type 2004-2016
+
+![2001](images/plots/region/pie_sum_3.png)
+
+
+
+### Greeley
+
+#### Breakdown by by Aid Type
+
+![2004](images/plots/region_year/pie_sum_65.png)  | ![2009](images/plots/region_year/pie_sum_70.png)  | ![2016](images/plots/region_year/pie_sum_77.png)
+------------- | -------------  | -------------
+------------- | -------------  | -------------
+
+#### Breakdown by Aid Type 2004-2016
+
+![2001](images/plots/region/pie_sum_5.png)
+
+### Pueblo
+
+#### Breakdown by by Aid Type
+
+![2004](images/plots/region_year/pie_sum_91.png)  | ![2009](images/plots/region_year/pie_sum_96.png)  | ![2016](images/plots/region_year/pie_sum_103.png)
+------------- | -------------  | -------------
+
+
+#### Breakdown by Aid Type 2004-2016
+
+![2001](images/plots/region/pie_sum_7.png)
+
+
+### Grand Junction / Western Slope
+
+#### Breakdown by by Aid Type
+
+![2004](images/plots/region_year/pie_sum_52.png)  | ![2009](images/plots/region_year/pie_sum_57.png)  | ![2016](images/plots/region_year/pie_sum_64.png)
+------------- | -------------  | -------------
+------------- | -------------  | -------------
+
+#### Breakdown by Aid Type 2004-2016
+
+![2001](images/plots/region/pie_sum_4.png)
+
+### Misc and Unassigned Schools
+
+#### Breakdown by by Aid Type
+
+![2004](images/plots/region_year/pie_sum_78.png)  | ![2009](images/plots/region_year/pie_sum_83.png)  | ![2016](images/plots/region_year/pie_sum_90.png)
+------------- | -------------  | -------------
+
+
+
+#### Breakdown by Aid Type 2004-2016
+
+![2001](images/plots/region/pie_sum_6.png)
+
+
 
 # Breakdown of Institutions' Awardees
 
@@ -96,7 +240,7 @@ To further break down the analysis into more granular segments, we did similar a
 * Fort Collins
 * Greeley
 * Pueblo
-* Western Slope
+* Grand Junction (Western Slope)
 
 ### Boulder
 
@@ -105,20 +249,10 @@ To further break down the analysis into more granular segments, we did similar a
 ![2001](images/boulder/boulder2001_type.png)  | ![2009](images/boulder/boulder2009_type.png)  | ![2017](images/boulder/boulder2017_type.png)
 ------------- | -------------  | -------------
 
-<!-- Year  | Universities | Community Colleges
-------------- | ------------- | -------------
-2001  | 77%  | 23%  
-2017  | 63%  | 37%   -->
-
 #### Breakdown by Degree
 
 ![2001](images/boulder/boulder2001_degree.png)  | ![2009](images/boulder/boulder2009_degree.png)  | ![2017](images/boulder/boulder2017_degree.png)
 ------------- | -------------  | -------------
-
-<!-- Year  | Bachelors | Associate | Masters | Certificate
-------------- | ------------- | ------------- | ------------- | -------------
-2001  | 46%  | 21%  | 18% | 15%
-2017  | 37%  | 19%  | 15% | 29% -->
 
 #### Breakdown by Program
 
@@ -210,7 +344,7 @@ To further break down the analysis into more granular segments, we did similar a
 ![2001](images/pueblo/pueblo2001_prog.png)  | ![2009](images/pueblo/pueblo2009_prog.png)  | ![2017](images/pueblo/pueblo2017_prog.png)
 ------------- | -------------  | -------------
 
-### Western Slope
+### Grand Junction (Western Slope)
 
 #### Breakdown by Institution Type
 
@@ -256,13 +390,13 @@ Status of Businesses Formed:
 
 Entity Status  | Total Businesses | Percent of Total
 ------------- | ------------- | -------------
-Delinquent  | 486725 | 42.40%
-Good Standing  | 408635  | 35.60%
-Voluntarily Dissolved  | 208854  | 18.20%
-Administratively Dissolved  | 27006  | 2.35%
-Noncompliant  | 12288  | 1.07%
-Withdrawn  | 2159  | 0.19%
-Exists  | 2066  | 0.18%
+Delinquent  | 486,725 | 42.40%
+Good Standing  | 408,635  | 35.60%
+Voluntarily Dissolved  | 208,854  | 18.20%
+Administratively Dissolved  | 27,006  | 2.35%
+Noncompliant  | 12,288  | 1.07%
+Withdrawn  | 2,159  | 0.19%
+Exists  | 2,066  | 0.18%
 Dissolved (Term Expired)  | 99  | 0.01%
 Judicially Dissolved  | 16  | 0.00%
 Effectiveness Prevented  | 1  | 0.00%
@@ -273,13 +407,13 @@ Type of Businesses Formed:
 
 Entity Type  | Total Businesses | Percent of Total
 ------------- | ------------- | -------------
-Limited Liability Company  | 864556 | 75.32%
-Corporation  | 211689  | 18.44%
-Nonprofit Corporation  | 50853  | 4.43%
-Limited Liability Partnership  | 6931  | 0.60%
-Limited Liability Limited Partnership  | 6062  | 0.53%
-Limited Partnership  | 4293  | 0.37%
-General Partnership  | 2146  | 0.19%
+Limited Liability Company  | 864,556 | 75.32%
+Corporation  | 211,689  | 18.44%
+Nonprofit Corporation  | 50,853  | 4.43%
+Limited Liability Partnership  | 6,931  | 0.60%
+Limited Liability Limited Partnership  | 6,062  | 0.53%
+Limited Partnership  | 4,293  | 0.37%
+General Partnership  | 2,146  | 0.19%
 Limited Partnership Association  | 374  | 0.03%
 Cooperative  | 316  | 0.03%
 Unincorporated Nonprofit Association  | 267 | 0.02%
@@ -579,141 +713,48 @@ Real Per Capita GDP (chained 2009 dollars) Trends:
 Real Per Capita GDP | Real Per Capita GDP Zoomed-in
 
 
+# Data Sets
 
-# Breakdown of Financial Entity Data
+### CIM Data:
 
-There are 29 unique institutions described in the dataset. For any given year, if the awardees associated with the institution was greater than 5% of total awardees for the year, the institution is represented. For all institutions which make up less than or equal to 5% of total awardees, that institution is grouped into 'Other'.
+Business Entity Data: CDOS - Colorado Department of State (https://www.sos.state.co.us/biz/BusinessEntityCriteriaExt.do).  
+Link: https://data.colorado.gov/Business/Business-Entities-in-Colorado/4ykn-tg5h
 
-![2001](images/plots/yearly/pie_sum_2004.png)  | ![2009](images/plots/yearly/pie_sum_2009.png)  | ![2017](images/plots/yearly/pie_sum_2006.png)
-------------- | -------------  | -------------
+Post-Secondary Financial Aid Demographics in Colorado - Financial Aid averages based on demographic breakdown of post-secondary students since 2004 from the Colorado Department of Higher Education (CDHE).
+Link: https://data.colorado.gov/Higher-Education/Post-Secondary-Financial-Aid-Demographics-in-Color/g53r-j5td
 
-From 2004 to 2016 we can see still about half of students were using federal loans to pay for college. State aid paid to university stayed consistent percentage wise, hovering around 8-9%.
+Degrees Awarded: CDHE - Colorado Department of Higher Education (http://highered.colorado.gov/).  
+Link: https://data.colorado.gov/Higher-Education/Degrees-Awarded-to-Post-Secondary-Graduates-in-Col/hxf8-ab6k
 
-The data set does not look to include private loans or paying for school out of pocket.  This information could be useful for future analysis into indebtedness of students.
 
-Looking at total federal loans and State aid we can see there is a large increase from 2004 to 2016.
+### Non-CIM Data:
 
-![](images/plots/state_aid_sum_inst.png)
-![](images/plots/federal_loans_sum_inst.png)
+Total Per Capita Real GDP Colorado Springs (chained 2009 dollars, not seasonally adjusted): U.S. Bureau of Economic Analysis, Total Per Capita Real Gross Domestic Product for Colorado Springs, CO (MSA) [PCRGMP17820], retrieved from FRED, Federal Reserve Bank of St. Louis; April 10, 2019.
+Link: https://fred.stlouisfed.org/series/PCRGMP17820
 
-State aid was stagnant after the recession of 2009 while federal loans continued to climb.  State aid doubled from 2004 to 2016 giving students about 160 million is aid.  Federal loans nearly doubled as well indebting students by about 800 million dollars in 2016.
+Total Per Capita Real GDP Boulder (chained 2009 dollars, not seasonally adjusted): U.S. Bureau of Economic Analysis, Total Per Capita Real Gross Domestic Product for Boulder, CO (MSA) [PCRGMP14500], retrieved from FRED, Federal Reserve Bank of St. Louis; April 10, 2019.
+Link: https://fred.stlouisfed.org/series/PCRGMP14500
 
-Scholarship levels have shown continual growth from 2004 - 2016.  
-![](images/plots/scholar_sum_inst.png)
+State Population Data: Colorado Department of Local Affairs.
+Link: https://demography.dola.colorado.gov/births-deaths-migration/data/components-change/
 
+State GDP (millions of current dollars): U.S. Bureau of Economic Analysis, Total Gross Domestic Product for Colorado 2001-2017.
+Link: https://apps.bea.gov/itable/iTable.cfm?ReqID=70&step=1#reqid=70&step=1&isuri=1
 
-what we are seeing is students have incurred more debt but they have also gained more aid from the State and more scholarships are being given out.
+State Per capita real GDP (chained 2012 dollars, not seasonally adjusted): U.S. Bureau of Economic Analysis 2001-2017.
+Link: https://apps.bea.gov/itable/iTable.cfm?ReqID=70&step=1#reqid=70&step=1&isuri=1
 
+Total Per Capita Real GDP Denver-Aurora-Lakewood (chained 2009 dollars, not seasonally adjusted): U.S. Bureau of Economic Analysis, Total Per Capita Real Gross Domestic Product for Denver-Aurora-Lakewood, CO (MSA) [PCRGMP19740], retrieved from FRED, Federal Reserve Bank of St. Louis; April 10, 2019.
+Link: https://fred.stlouisfed.org/series/PCRGMP19740
 
-## Breakdown by Metro Areas
+Total Per Capita Real GDP Pueblo (chained 2009 dollars, not seasonally adjusted): U.S. Bureau of Economic Analysis, Total Per Capita Real Gross Domestic Product for Pueblo, CO (MSA) [PCRGMP39380], retrieved from FRED, Federal Reserve Bank of St. Louis; April 10, 2019.
+Link: https://fred.stlouisfed.org/series/PCRGMP39380
 
-To further break down the analysis into more granular segments, we did similar analysis on seven different 'metro' areas we defined. They are:
+Total Per Capita Real GDP Fort Collins (chained 2009 dollars, not seasonally adjusted): U.S. Bureau of Economic Analysis, Total Per Capita Real Gross Domestic Product for Fort Collins, CO (MSA) [PCRGMP22660], retrieved from FRED, Federal Reserve Bank of St. Louis; April 10, 2019.
+Link: https://fred.stlouisfed.org/series/PCRGMP22660
 
-* Boulder
-* Colorado Springs
-* Denver
-* Fort Collins
-* Greeley
-* Pueblo
-* Grand Junction / Western Slope
+Total Per Capita Real GDP Greeley (chained 2009 dollars, not seasonally adjusted): U.S. Bureau of Economic Analysis, Total Per Capita Real Gross Domestic Product for Greeley, CO (MSA) [PCRGMP24540], retrieved from FRED, Federal Reserve Bank of St. Louis; April 10, 2019.
+Link: https://fred.stlouisfed.org/series/PCRGMP24540
 
-![](images/plots/state_aid_sum_region.png) |![](images/plots/federal_loans_sum_region.png) |![](images/plots/scholar_sum_region.png)
-------------- | -------------  | -------------
-### Boulder
-
-#### Breakdown by Aid Type
-
-![2004](images/plots/region_year/pie_sum_0.png)  | ![2009](images/plots/region_year/pie_sum_5.png)  | ![2016](images/plots/region_year/pie_sum_12.png)
-------------- | -------------  | -------------
-
-
-#### Average Breakdown by Aid Type 2004-2016
-
-![](images/plots/region/pie_sum_0.png)
-
-
-
-### Colorado Springs
-
-#### Breakdown by Aid Type
-
-![2004](images/plots/region_year/pie_sum_13.png)  | ![2009](images/plots/region_year/pie_sum_18.png)  | ![2016](images/plots/region_year/pie_sum_25.png)
-------------- | -------------  | -------------
-
-#### Average Breakdown by Aid Type 2004-2016
-
-![](images/plots/region/pie_sum_1.png)  
-
-### Denver
-
-#### Breakdown by Aid Type
-
-![2004](images/plots/region_year/pie_sum_26.png)  | ![2009](images/plots/region_year/pie_sum_31.png)  | ![2016](images/plots/region_year/pie_sum_38.png)
-------------- | -------------  | -------------
-
-#### Average Breakdown by Aid Type 2004-2016
-
-![2001](images/plots/region/pie_sum_2.png)
-
-### Fort Collins
-
-#### Breakdown by Aid Type
-
-![2004](images/plots/region_year/pie_sum_39.png)  | ![2009](images/plots/region_year/pie_sum_44.png)  | ![2016](images/plots/region_year/pie_sum_51.png)
-------------- | -------------  | -------------
-
-#### Breakdown by Aid Type 2004-2016
-
-![2001](images/plots/region/pie_sum_3.png)
-
-
-
-### Greeley
-
-#### Breakdown by by Aid Type
-
-![2004](images/plots/region_year/pie_sum_65.png)  | ![2009](images/plots/region_year/pie_sum_70.png)  | ![2016](images/plots/region_year/pie_sum_77.png)
-------------- | -------------  | -------------
-------------- | -------------  | -------------
-
-#### Breakdown by Aid Type 2004-2016
-
-![2001](images/plots/region/pie_sum_5.png)
-
-### Pueblo
-
-#### Breakdown by by Aid Type
-
-![2004](images/plots/region_year/pie_sum_91.png)  | ![2009](images/plots/region_year/pie_sum_96.png)  | ![2016](images/plots/region_year/pie_sum_103.png)
-------------- | -------------  | -------------
-
-
-#### Breakdown by Aid Type 2004-2016
-
-![2001](images/plots/region/pie_sum_7.png)
-
-
-### Grand Junction / Western Slope
-
-#### Breakdown by by Aid Type
-
-![2004](images/plots/region_year/pie_sum_52.png)  | ![2009](images/plots/region_year/pie_sum_57.png)  | ![2016](images/plots/region_year/pie_sum_64.png)
-------------- | -------------  | -------------
-------------- | -------------  | -------------
-
-#### Breakdown by Aid Type 2004-2016
-
-![2001](images/plots/region/pie_sum_4.png)
-
-### Misc and Unassigned Schools
-
-#### Breakdown by by Aid Type
-
-![2004](images/plots/region_year/pie_sum_78.png)  | ![2009](images/plots/region_year/pie_sum_83.png)  | ![2016](images/plots/region_year/pie_sum_90.png)
-------------- | -------------  | -------------
-
-
-
-#### Breakdown by Aid Type 2004-2016
-
-![2001](images/plots/region/pie_sum_6.png)
+Total Per Capita Real GDP Grand Junction (chained 2009 dollars, not seasonally adjusted): U.S. Bureau of Economic Analysis, Total Per Capita Real Gross Domestic Product for Grand Junction, CO (MSA) [PCRGMP24300], retrieved from FRED, Federal Reserve Bank of St. Louis; April 10, 2019.
+Link: https://fred.stlouisfed.org/series/PCRGMP24300
