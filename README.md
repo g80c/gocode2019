@@ -2,21 +2,104 @@
 
 Loom Video Link: [Put Link Here]
 
-
 # Introduction
 
 Where would you start a business?  Why would you chose that location?  Would it be worth moving or hiring from other regions to increase your chances of success?  In this analysis we will explore factors that should help guide you to choosing the best place to start your business or where to hire from.
 
 # Methodology
 
+## Selecting Datasets
 
-# GoCode Colorado - Analysis
+The first step in our process was deciding what data sets to use to tackle our question. We began by each taking a look though the data sets provided by the State.  We settled on using "" as our baseline data set.  With this data set we then began to explore what other data would be needed to accomplish our mission.  We settled on using a few datasets focused on how students financing their education, degrees awarded by institutions, business formations, and GDP of the state.
 
-We focused on many datasets for this competition.  Our focus was on four data type structures: business, GDP, college degrees, and college finances.    
+## Cleaning and preparing Data
 
-The first dataset we focused on was 'Degrees Awarded to Post-Secondary Graduates in Colorado'.  
+Cleaning data is always a large undertaking.  Datasets can be littered with Null values, strange combinations of data types, and totally incorrect entries.  Our team spent a fair amount of time looking into what the data sets were meant to hold within their structure and what the columns were supposed to mean, some names can be cryptic.
 
-Description of the dataset: 'Demographics for all certificate, degree, or formal award approved by Colorado Department of Higher Education (CDHE) for students since 2001. Demographics include data on age, ethnicity, program name, and residency.'
+Another important task was to decide on what values to merge datasets. This meant looking for values in the datasets that had similar if not identical values.  Many of our data sets need out help to add the key that we would join them on. We settled on using each metro area as one of our keys.
+
+## Exploratory Data Analysis (EDA)
+
+Breaking the team up and having members look into different agreed upon datasets helped expedite our process.  We all then dove into the data to find what structures could be found below the surface. We then decided to look at each data set from a State and a metro area perceptive. EDA took up a substantial portion of our time.
+
+## Modeling
+
+For the first round we did some more simplistic modeling on the GDP of the metro areas.  
+
+# Analysis
+
+## Financial simple analysis:
+
+### State
+
+Colorado as a whole is giving out more aid.  We have seen a large up tick in State aid especially from 2014-2015. This seems to trend with the GDP increases over time.  Students have been getting less Federal loans and more scholarships.  Federal loans have been on the decline since 2012 but still make up about 50% of all loans.
+
+### Metro Areas
+
+Boulder - Seen a large increase in the number of scholarships awarded. Boulder gave out about 30 million in total scholarships in 2016.  This is the highest among the schools.
+
+Colorado Springs -  Been fairly consistent in the number of scholarships.  Federal aid in this metro area has been fairly stable as well.
+
+Denver - Denver has seen the largest growth in federal loans along with state aid.  Denver has had a large growth in scholarships but is still way below that of boulder. Over 70% of funds are coming from the federal government loans.
+
+Fort Collins - Fort Collins has had slow growth on in the total number of federal loans.  The number of scholarships has nearly tripled. Fort Collins has not had significant growth in state aid.
+
+Greeley - Greeley has missed growth in giving out scholarships. There has also been no significant increase in State aid.  The amount of federal loans doubled in between 2004 and 2016.
+
+Pueblo - Pueblo has gone through a few cycles in terms of amount of scholarships awarded. Pueblo has also trended up and back down in both federal loans and state aid.   
+
+Western Slope - Seen double the amount in state aid from 2004 - 2016.  Unfortunately there are minimal scholarships given out to schools on the western slopes. Federal loans to theses school have also more than doubled.
+
+
+## Degree simple analysis:
+
+### State
+
+Overall students are opting to get more certificates. We see a larger percentage of students opting for a certificate over the traditional 2-4 year degree.  We have also seen labor programs have been making a substantial come back over the last 10 years.
+
+### Metro
+
+Boulder - Boulder has students in either a community college or University.  More students have chosen to go to a community college over the University. Boulder has the largest percentage of masters and doctoral degrees awarded.  The education has the highest percentage of  students graduating with math/engineering and business degrees.
+
+
+Colorado Springs - Colorado Springs has students in either a community college or University.  More students have chosen to go to a community college over the University, over 50%.  Roughly 60% of students have opted to get certificates and associate awards over the traditional bachelors degree.
+
+Denver - Denver has students in either a community college, University, or state school.  Student distributions have been fairly consistent.  Students in this region have the 2nd highest masters degree rate. There has also been a upswing in doctoral degrees. A large percentage of the degrees are math and science focused. Labor degrees have almost doubled from 2001 to 2017
+
+Fort Collins - Fort Collins has the largest rate of bachelor and masters students graduating.  They have seen a decrease in the rate of students getting doctoral degrees. Fort Collins has a fairly even distribution of all the degree groups.    
+
+Greeley - Greeley has a large focus on social science, art/history, and physical/medical/wellness.  they have seen a down trend in masters students and a large increase in certificate graduates. The percentage of certificates awarded has over taken the number of bachelor degrees awarded. This could be from the large population of nurses/teachers graduating get both a degree and certificate.
+
+Pueblo - Has seen a very large increase in the percentage of certificate graduates. Bachelors and masters degrees make up less than 40% of their graduating population. There is a large focus in physical/medical/wellness and arts/history, roughly 30% of students. Labor degrees have also increased dramatically.
+
+Western Slope - Over 30% of students are opting for a certificate program.  These programs focus on the arts/history and social sciences. This is the only metro area that saw a downturn in the number of labor based degrees.
+Collapse
+
+## Business Formation simple analysis:
+
+### State
+
+The total number of businesses formed in the state of Colorado from 2001-2017 was 1,147,849. Out of the total number of businesses formed, 36.1% were still in good standing when the dataset was used in 2019. This means that approximately 64% of businesses are no longer in good standing and may be considered failed in most cases. Most companies formed were Limited Liability Companies with 76.7% of the overall share. Corporations were the second most popular at 18.8%.
+
+When looking at the number of businesses formed per year, we looked at the raw count and then controlled for population growth by looking at how many companies were formed per 1000 residents. The raw numbers show approximately 30,000 businesses being formed in 2001, and almost 100,000 new businesses in 2017. This is over 3x the amount of companies being created in 2017 versus 2001. When controlled for population we saw approximately seven (7) companies per 1000 residents being formed in 2001 and almost eighteen (18) companies for every 1000 residents in 2017. This shows that people are creating more new companies in the latter years versus any other time before.
+
+Looking at the population trends for the state we see a linear growth pattern. The population of the state is growing steadily from 2001 to 2017.
+
+State GDP was looked at using GDP in current dollars, which showed an upward trend, but based on the population growth we expected this. So we then controlled for population growth by looking at the state real per capita GDP chained to 2012 dollars. When we look at the per capita GDP, we see less growth, but still a slight upward trend from 2001 to 2017, meaning that economic output is increasing per person.
+
+### Metro
+
+Boulder - The total number of businesses formed in the Boulder Metro Area from 2001-2017 was 87,542. This is approximately 8% of the total companies in our study. Out of the Boulder companies formed, the highest category of status is Good Standing with 38.8% of the share and Delinquent is a close second at 38.5% of the share. When looking at the types of companies formed during this time period, Limited Liability Companies are by far the preferred type with 79.6% of the companies. Corporations are second with 16.2% of the companies. The number of companies have gone up substantially since 2001. In 2001 there were approximately 2,800 companies formed and in 2017 this number grew to approximately 7,500. Then we looked at real per capita GDP for Boulder and saw an upward trend since a low in 2002.
+
+Results: When comparing Boulder to the State, Boulder has a higher percentage of businesses in Good Standing, a higher percentage of Limited Liability Companies and a Lower percentage of Corporations. Boulder has a strong upward trend in the number of companies being formed per year. And Boulder has a higher real per capita GDP than the state average. This makes us believe that Boulder would be a good place to start a company due to its strong economy, increase in business formations, and percentage of companies in Good Standing. However, you may need to pay more than average for talent in this area.
+
+Colorado Springs - The total number of businesses formed in the Colorado Springs Metro Area from 2001-2017 was 110,486. This is approximately 10% of the total companies in our study. Out of the Colorado Springs companies formed, the highest category of status is Delinquent with 44.1% of the share and Good Standing is second at 35.0% of the share. When looking at the types of companies formed during this time period, Limited Liability Companies are the preferred type with 73.2% of the companies. Corporations are second with 22.0% of the companies. The number of companies formed per year has gone up substantially since 2001. In 2001 there were approximately 2,800 companies formed and in 2017 this number grew to approximately 10,000. Then we looked at real per capita GDP for Colorado Springs and found a peak high in 2005 at 42,500 and then a decline to approximately 39,000 in 2014. Since 2014, Colorado Springs has seen real per capita GDP on the rise, with 2017 at almost 40,000.
+
+Results: When comparing Colorado Springs to the State, it has a higher percentage of businesses in a Delinquent state, and a lower percentage of companies in Good Standing. It has a lower percentage of Limited Liability Companies and a higher percentage of Corporations. Colorado Springs has a strong upward trend in the number of companies being formed per year. However, Colorado Springs has a lower real per capita GDP than the state average, but it is trending upward since 2014. This makes us believe that Colorado Springs strengths include a strengthening economy and high number of new business formation. If considering a company there you may be able to pay less for labor since real per capita GDP is below the state average.
+
+Denver - The total number of businesses formed in the Denver Metro Area from 2001-2017 was 615,787. This is approximately 54% of the total companies in our study. Out of the Denver companies formed, the highest category of status is Delinquent with 45.2% of the share and Good Standing is second at 33.8% of the share. When looking at the types of companies formed during this time period, Limited Liability Companies are the preferred type with 76.9% of the companies. Corporations are second with 19.2% of the companies. The number of companies formed per year has gone up substantially since 2001. In 2001 there were approximately 18,000 companies formed and in 2017 this number grew to over 50,000. Then we looked at real per capita GDP for Denver and found a local low in 2011 at 59,000 and then strong growth to over 64,000 in 2017.
+
+Results: When comparing Denver to the State, it has a higher percentage of businesses in a Delinquent state, and a lower percentage of companies in Good Standing. It has a higher percentage of Limited Liability Companies and a higher percentage of Corporations. Denver has a strong upward trend in the number of companies being formed. Denver also has a higher real per capita GDP than the state average, and is showing a strong upward trend since 2013. This makes us believe that Denver strengths include a strong economy and high number of new business formation.
 
 
 # Breakdown of Financial Entity Data
